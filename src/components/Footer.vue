@@ -1,36 +1,58 @@
 <template>
     <div class="footer">
-        <v-row class="text-center">
-            <v-col class="footer-item" md="4" cols="12">
-                <h3 class="footer-item-title">{{magasin.name}}</h3>
-                <p class="footer-item-content">{{magasin.footer_short_des}}<p/>
-            </v-col>
-            <v-col class="footer-item" md="4" cols="12">
-                <h3 class="footer-item-title">Address & Contact</h3>
-                <p class="footer-item-content">
-                    <span><v-icon>mdi-email</v-icon> {{magasin.email}}</span>
-                    <br>
-                    <span><v-icon>mdi-phone</v-icon> {{magasin.phone}}</span>
-                    <br>
-                    <span><v-icon>mdi-map-marker</v-icon> {{magasin.address}}</span>
-                </p>
-            </v-col>
-            <v-col class="footer-item" md="4" cols="12">
-                <h3 class="footer-item-title">Be Social with US</h3>
-                <p class="footer-item-content pt-2">
-                    <v-row class="text-center" justify="center">
-                        <v-col cols="1"><a :href="'//' + magasin.facebook" target="_blank"><v-icon color="blue">mdi-facebook</v-icon></a></v-col>
-                        <v-col cols="1"><a :href="'//' + magasin.twitter" target="_blank"><v-icon color="blue">mdi-twitter</v-icon></a></v-col>
-                        <v-col cols="1"><a :href="'//' + magasin.instagram"><v-icon>mdi-instagram</v-icon></a></v-col>
-                        <v-col cols="1"><a :href="'//' + magasin.google_plus"><v-icon color="red">mdi-youtube</v-icon></a></v-col>
-                    </v-row>
-                </p>
-                <p>
-                    Copyright © {{magasin.name}} - {{new Date().getFullYear() }}
-                </p>
-            </v-col>
-        </v-row>
+
     </div>
+<!--    <footer class="site-footer">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-sm-12 col-md-6">-->
+<!--                    <h6>About</h6>-->
+<!--                    <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>-->
+<!--                </div>-->
+
+<!--                <div class="col-xs-6 col-md-3">-->
+<!--                    <h6>Categories</h6>-->
+<!--                    <ul class="footer-links">-->
+<!--                        <li><a href="http://scanfcode.com/category/c-language/">C</a></li>-->
+<!--                        <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>-->
+<!--                        <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>-->
+<!--                        <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>-->
+<!--                        <li><a href="http://scanfcode.com/category/android/">Android</a></li>-->
+<!--                        <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+
+<!--                <div class="col-xs-6 col-md-3">-->
+<!--                    <h6>Quick Links</h6>-->
+<!--                    <ul class="footer-links">-->
+<!--                        <li><a href="http://scanfcode.com/about/">About Us</a></li>-->
+<!--                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>-->
+<!--                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>-->
+<!--                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>-->
+<!--                        <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <hr>-->
+<!--        </div>-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-8 col-sm-6 col-xs-12">-->
+<!--                    <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by-->
+<!--                        <a href="#">Scanfcode</a>.-->
+<!--                    </p>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4 col-sm-6 col-xs-12">-->
+<!--                    <ul class="social-icons">-->
+<!--                        <li><a class="facebook" href="#"><v-icon>mdi-facebook</v-icon></a></li>-->
+<!--                        <li><a class="twitter" href="#"><v-icon>mdi-twitter</v-icon></a></li>-->
+<!--                        <li><a class="linkedin" href="#"><v-icon>mdi-linkedin</v-icon></a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </footer>-->
 </template>
 
 <script>
@@ -56,11 +78,173 @@
 
 <style scoped>
     .footer {
-        padding: 30px;
-        background-image: linear-gradient(to right, #c1e1fc, #e8f5ff);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/footer.jpg");
+        background-size: contain;
+        height: 235px;
+        width: 100%;
     }
-    .footer-item-content {
-        margin-top: 10px;
+    .site-footer
+    {
+        background-color:#26272b;
+        padding:45px 0 20px;
+        font-size:15px;
+        line-height:24px;
+        color:#737373;
+    }
+    .site-footer hr
+    {
+        border-top-color:#bbb;
+        opacity:0.5
+    }
+    .site-footer hr.small
+    {
+        margin:20px 0
+    }
+    .site-footer h6
+    {
+        color:#fff;
+        font-size:16px;
+        text-transform:uppercase;
+        margin-top:5px;
+        letter-spacing:2px
+    }
+    .site-footer a
+    {
+        color:#737373;
+    }
+    .site-footer a:hover
+    {
+        color:#3366cc;
+        text-decoration:none;
+    }
+    .footer-links
+    {
+        padding-left:0;
+        list-style:none
+    }
+    .footer-links li
+    {
+        display:block
+    }
+    .footer-links a
+    {
+        color:#737373
+    }
+    .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+    {
+        color:#3366cc;
+        text-decoration:none;
+    }
+    .footer-links.inline li
+    {
+        display:inline-block
+    }
+    .site-footer .social-icons
+    {
+        text-align:right
+    }
+    .site-footer .social-icons a
+    {
+        width:40px;
+        height:40px;
+        line-height:40px;
+        margin-left:6px;
+        margin-right:0;
+        border-radius:100%;
+        background-color:#33353d
+    }
+    .copyright-text
+    {
+        margin:0
+    }
+    @media (max-width:991px)
+    {
+        .site-footer [class^=col-]
+        {
+            margin-bottom:30px
+        }
+    }
+    @media (max-width:767px)
+    {
+        .site-footer
+        {
+            padding-bottom:0
+        }
+        .site-footer .copyright-text,.site-footer .social-icons
+        {
+            text-align:center
+        }
+    }
+    .social-icons
+    {
+        padding-left:0;
+        margin-bottom:0;
+        list-style:none
+    }
+    .social-icons li
+    {
+        display:inline-block;
+        margin-bottom:4px
+    }
+    .social-icons li.title
+    {
+        margin-right:15px;
+        text-transform:uppercase;
+        color:#96a2b2;
+        font-weight:700;
+        font-size:13px
+    }
+    .social-icons a{
+        background-color:#eceeef;
+        color:#818a91;
+        font-size:16px;
+        display:inline-block;
+        line-height:44px;
+        width:44px;
+        height:44px;
+        text-align:center;
+        margin-right:8px;
+        border-radius:100%;
+        -webkit-transition:all .2s linear;
+        -o-transition:all .2s linear;
+        transition:all .2s linear
+    }
+    .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+    {
+        color:#fff;
+        background-color:#29aafe
+    }
+    .social-icons.size-sm a
+    {
+        line-height:34px;
+        height:34px;
+        width:34px;
+        font-size:14px
+    }
+    .social-icons a.facebook:hover
+    {
+        background-color:#3b5998
+    }
+    .social-icons a.twitter:hover
+    {
+        background-color:#00aced
+    }
+    .social-icons a.linkedin:hover
+    {
+        background-color:#007bb6
+    }
+    .social-icons a.dribbble:hover
+    {
+        background-color:#ea4c89
+    }
+    @media (max-width:767px)
+    {
+        .social-icons li.title
+        {
+            display:block;
+            margin-right:0;
+            font-weight:600
+        }
     }
     a {
         text-decoration: none;

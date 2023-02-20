@@ -1,28 +1,36 @@
 <template>
 
   <div>
-    <v-app-bar dense app color="white" elevation="3" light>
+    <v-app-bar dense app color="white" elevation="3" light height="60">
       <v-toolbar-title>
-        <img :src="'https://idevelop.club/Dashboard' + magasin.logo" height="32" alt="ID Logo" class="mt-1"/>
+        <img src="../assets/logo.png" height="45" alt="Logo" class="mt-1"/>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-list class="d-flex align-center" style="background-color: transparent">
           <a style="text-decoration: none" :href="menu.id" v-for="(menu, index) in menus" :key="index">
             <v-list-item  link>
-              <v-list-item-title>{{menu.title}}</v-list-item-title>
+              <v-list-item-title>Home</v-list-item-title>
             </v-list-item>
           </a>
-          <v-list-item  link to="/magazine">
-            <v-list-item-title>ID Magazine</v-list-item-title>
+          <v-list-item  link to="/products">
+            <v-list-item-title>Products</v-list-item-title>
           </v-list-item>
-          <v-list-item  link to="/magazine">
-            <v-list-item-title>ID Channel</v-list-item-title>
+          <v-list-item  link to="/application">
+            <v-list-item-title>Application</v-list-item-title>
+          </v-list-item>
+          <v-list-item  link to="/case">
+            <v-list-item-title>Case study</v-list-item-title>
+          </v-list-item>
+          <v-list-item  link to="/calculator">
+            <v-list-item-title>Calculator</v-list-item-title>
+          </v-list-item>
+          <v-list-item  link to="/about">
+            <v-list-item-title>About US</v-list-item-title>
           </v-list-item>
           <v-list-item  link to="/contact">
             <v-list-item-title>Contact US</v-list-item-title>
           </v-list-item>
-          <v-spacer></v-spacer>
         </v-list>
       </v-toolbar-items>
       <div class="hidden-md-and-up">
@@ -35,14 +43,23 @@
           <v-list>
             <a style="text-decoration: none" :href="menu.id" v-for="(menu, index) in menus" :key="index">
               <v-list-item  link>
-                <v-list-item-title>{{menu.title}}</v-list-item-title>
+                <v-list-item-title>Home</v-list-item-title>
               </v-list-item>
             </a>
             <v-list-item  link to="/magazine">
-              <v-list-item-title>ID Magazine</v-list-item-title>
+              <v-list-item-title>Products</v-list-item-title>
             </v-list-item>
-            <v-list-item  link to="/magazine">
-              <v-list-item-title>ID Channel</v-list-item-title>
+            <v-list-item  link to="/channel">
+              <v-list-item-title>Application</v-list-item-title>
+            </v-list-item>
+            <v-list-item  link to="/contact">
+              <v-list-item-title>Case study</v-list-item-title>
+            </v-list-item>
+            <v-list-item  link to="/contact">
+              <v-list-item-title>Calculator</v-list-item-title>
+            </v-list-item>
+            <v-list-item  link to="/contact">
+              <v-list-item-title>About US</v-list-item-title>
             </v-list-item>
             <v-list-item  link to="/contact">
               <v-list-item-title>Contact US</v-list-item-title>
